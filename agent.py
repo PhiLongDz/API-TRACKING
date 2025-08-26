@@ -36,7 +36,8 @@ def get_local_ip():
 def read_cpu_times():
     try:
         line=open('/proc/stat').readline()
-        parts=list(map(int,line.split()[1:11])); while len(parts)<10: parts.append(0)
+        parts=list(map(int,line.split()[1:11])); 
+        while len(parts)<10: parts.append(0)
         idle, iowait = parts[3], parts[4]; idle_all=idle+iowait; total=sum(parts)
         return (idle_all,total)
     except: return None
