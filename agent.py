@@ -3,7 +3,7 @@ import os, time, uuid, socket, platform, subprocess, json
 import requests
 
 # ========= Config =========
-SERVER = os.environ.get("SERVER", "https://laughing-garbanzo-pjvgvw4qwrgcr7v6-8000.app.github.dev").rstrip("/")
+SERVER = os.environ.get("SERVER", "http://37.27.65.125:21072").rstrip("/")
 APP_VERSION = "agent/3.0.0"
 POST_INTERVAL = int(os.environ.get("INTERVAL", "30"))  # seconds
 ID_PATH = os.path.expanduser("~/.heartbeat_id")
